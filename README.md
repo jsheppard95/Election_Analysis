@@ -26,3 +26,18 @@ The analysis of the election shows that:
     - Raymon Anthony Doane received 3.1% of the vote and 11,606 number of votes.
 - The winner of the election was:
     - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
+
+## Challenge Overview
+Our data source is a CSV file with the following format:
+```
+Ballot ID,County,Candidate
+```
+We thus loop through each row in the file to aquire the total number of votes, the candidate options, and the number of votes cast for each candidate.
+We then calculate the percentage of the popular vote and the total number of votes that each candidate received to determine the winner and output this result
+to both the terminal and [election_analysis.txt](analysis/election_analysis.txt).
+
+## Challenge Summary
+We find the winner of the election was Diana DeGette with 73.8% of the vote (272,892 votes). This script is generalizeable to other election data sources
+following the same format as [election_results.csv](Resources/election_results.csv) with the replacement of the hard-coded input file name with an input
+parameter. This could be accomplished through a command line interface using [argparse](https://docs.python.org/3/library/argparse.html), `sys.argv`, or a simple
+function call using the Python interpreter.
