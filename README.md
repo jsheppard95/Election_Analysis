@@ -1,31 +1,32 @@
 # Election_Analysis
 
-## Project Overview
-Here we have a Python script to audit an example local congressional election and perform the following tasks:
+## Overview of Election Audit
+Here we have a Python script to audit a Colorado local congressional election and report the voting breakdown by county and candidate.
+The script reads a CSV file [election_results.csv](Resources/election_results.csv) of format `Ballot ID,County,Candidate` and tallies
+the number of votes by county and candidate. It then reports the total number of votes cast, the breakdown by county and candidate,
+the largest county turnout, and the winner of the election to the terminal and output file [election_results.txt](analysis/election_results.txt).
 
-1. Calculate the total number of votes cast
-2. Get a complete list of candidates who received votes.
-3. Calculate the total number of votes each candidate received.
-4. Calculate the percentage of votes each candidate won.
-5. Determine the winner of the election based on popular vote.
-
-## Resources
+### Resources
 - Data source: [election_results.csv](Resources/election_results.csv)
 - Software: Python 3.7.6, Visual Studio Code, 1.51.1
 
-## Summary
+## Election-Audit Results
 The analysis of the election shows that:
 - There were 369,711 votes cast in the election.
-- The candidates were:
-    - Charles Casper Stockham
-    - Diana DeGette
-    - Raymon Anthony Doane
+- The county results were:
+    - Jefferson: 10.5% (38,855)
+    - Denver: 82.8% (306,055)
+    - Arapahoe: 6.7% (24,801)
+- The county with the largest voter turnout was:
+    - Denver, with 82.8% of the vote and 306,055 votes
 - The candidate results were
-    - Charles Casper Stockham received 23.0% of the vote and 85,213 number of votes.
-    - Diana DeGette received 73.8% of the vote and 272,892 number of votes.
-    - Raymon Anthony Doane received 3.1% of the vote and 11,606 number of votes.
+    - Charles Casper Stockham: 23.0% (85,213)
+    - Diana DeGette: 73.8% (272,892)
+    - Raymon Anthony Doane: 3.1% (11,606)
 - The winner of the election was:
-    - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
+    - Diana DeGette, who received 73.8% of the vote and 272,892 votes.
+
+## Election-Audit Summary
 
 ## Challenge Overview
 Our data source is a CSV file with the following format:
