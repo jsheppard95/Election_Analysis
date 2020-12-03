@@ -93,10 +93,10 @@ The analysis of the election shows that:
 
 ## Election-Audit Summary
 Through this audit of a Colorado local congressional election, we find the
-county with the largest voter turnout to be Denver having casted 82.8% of the
-vote for a total of 306,055 votes along with the winner to be Diana DeGette
-with 73.8% of the vote for a total of 272,892 votes. This script is
-generalizeable to other election data sources following the same format as
+county with the largest voter turnout to be Denver providing 82.8% of the vote
+for a total of 306,055 votes along with the winner to be Diana DeGette with
+73.8% of the vote for a total of 272,892 votes. This script is generalizable to
+other election data sources following the same format as
 [election_results.csv](Resources/election_results.csv) with the replacement of
 the hard-coded input file name `election_results.csv` with an input parameter.
 One method to do so would be to move the entire script within a function
