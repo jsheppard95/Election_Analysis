@@ -75,8 +75,6 @@ with open(file_to_load) as election_data:
         # 5: Add a vote to that county's vote count.
         county_votes[county_name] += 1
 
-
-
 # Save the results to our text file.
 with open(file_to_save, "w") as txt_file:
 
@@ -91,7 +89,8 @@ with open(file_to_save, "w") as txt_file:
 
     txt_file.write(election_results)
 
-    # 6a: Write a repetition statement to get the county from the county dictionary.
+    # 6a: Write a repetition statement to get the county from the county
+    #     dictionary.
     for county_name in county_votes:
         # 6b: Retrieve the county vote count.
         votes = county_votes[county_name]
@@ -104,7 +103,8 @@ with open(file_to_save, "w") as txt_file:
         print(county_results.rstrip('\n'))
         # 6e: Save the county votes to a text file.
         txt_file.write(county_results)
-        # 6f: Write a decision statement to determine the winning county and get its vote count.
+        # 6f: Write a decision statement to determine the winning county and
+        #     get its vote count.
         if votes > winning_voter_turnout:
             winning_county = county_name
             winning_voter_turnout = votes
