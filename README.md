@@ -12,7 +12,7 @@ election to the terminal and output file
 
 ### Resources
 - Data source: [election_results.csv](Resources/election_results.csv)
-- Software: Python 3.7.6, Visual Studio Code, 1.51.1
+- Software: Python 3.7.6, Visual Studio Code 1.51.1
 
 ## Election-Audit Results
 
@@ -53,7 +53,7 @@ winning_count = 0
 winning_percentage = 0
 winning_candidate = ""
 ```
-We can then find the winner as:
+We can then find the winner as follows:
 ```
 for candidate_name in candidate_votes:
     # Retrieve vote count and percentage
@@ -70,8 +70,8 @@ for candidate_name in candidate_votes:
         winning_percentage = vote_percentage
 ```
 We are then left with the `winning_count`, `winning_candidate`, and
-`winning_percentage` set to the corresponding values in `candidate_votes`. We
-can then output the winner to the terminal and output file
+`winning_percentage` set to the correct values from `candidate_votes` which we
+then write to the terminal and output file
 [election_results.txt](analysis/election_results.txt). The process is similar
 for the county results.
 
@@ -94,7 +94,7 @@ The analysis of the election shows that:
 ## Election-Audit Summary
 Through this audit of a Colorado local congressional election, we find the
 county with the largest voter turnout to be Denver providing 82.8% of the vote
-for a total of 306,055 votes along with the winner to be Diana DeGette with
+for a total of 306,055 votes and the winner to be Diana DeGette with
 73.8% of the vote for a total of 272,892 votes. This script is generalizable to
 other election data sources following the same format as
 [election_results.csv](Resources/election_results.csv) with the replacement of
@@ -118,7 +118,7 @@ and call the function from the Python interpreter as:
 ```
 >>> analyze_election_date(input_file.csv)
 ```
-An alternative would be to input the CSV file from the command line using
+An alternative is to input the CSV file from the command line using
 [`sys.argv`](https://docs.python.org/3/library/sys.html#sys.argv). This would
 require the following addition:
 ```
