@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Overview of Election Audit
-Here we have a Python script to audit a Colorado local congressional election
+Here we have a Python script to audit a local Colorado congressional election
 and report the voting breakdown by county and candidate. The script reads the
 CSV file [election_results.csv](Resources/election_results.csv) of format
 `Ballot ID,County,Candidate` and tallies the number of votes by county and
@@ -19,7 +19,7 @@ election to the terminal and output file
 ### Methods
 To perform this analysis, we loop through each row in the input file using
 [`csv.reader`](https://docs.python.org/3/library/csv.html#csv.reader), adding
-to the total count and acquiring the chosen candidate and voting county with
+to the total vote count and acquiring the chosen candidate and voting county with
 each iteration:
 ```
 # Read the csv and convert it into a list of dictionaries
@@ -44,7 +44,7 @@ with open(file_to_load) as election_data:
 We then check if this is the first instance of each candidate and county and
 if so, add it to the results dictionaries `candidate_votes` and `county_votes`
 with initial counts of zero. We then increment the count for this and all
-subsequent iterations of the current row's `candidate_name` and `county_name`.
+subsequent instances of the current row's `candidate_name` and `county_name`.
 Finally, we loop through both results dictionaries to determine winner of the
 election and the county casting the most votes. In the case of the candidates,
 we first initialize the following variables:
