@@ -19,8 +19,8 @@ election to the terminal and output file
 ### Methods
 To perform this analysis, we loop through each row in the input file using
 [`csv.reader`](https://docs.python.org/3/library/csv.html#csv.reader), adding
-to the total vote count and acquiring the chosen candidate and voting county with
-each iteration:
+to the total vote count and acquiring the chosen candidate and voting county
+with each iteration:
 ```
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
@@ -114,9 +114,10 @@ We would then set our input file as:
 ```
 file_to_load = os.path.join("Resources", infile)
 ```
-and call the function from the Python interpreter as:
+and import/call the function from the Python interpreter as:
 ```
->>> analyze_election_date(input_file.csv)
+>>> from PyPoll_Challenge import analyze_election_data
+>>> analyze_election_data(input_file.csv)
 ```
 An alternative is to input the CSV file from the command line using
 [`sys.argv`](https://docs.python.org/3/library/sys.html#sys.argv). This would
